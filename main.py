@@ -71,8 +71,8 @@ t1, t2, t3 = st.tabs(["Bivariate" , "Tivariate" , 'About'])
 num_cols = df.select_dtypes(include=np.number).columns.tolist()
 with t1:
     c1, c2 = st.columns(2)
-    col1 = c1.radio("select the first column for scatter plot", num_cols,)
-    col2 = c2.radio("select the second column for scatter plot", num_cols)
+    col1 = c1.radio("select the first column for scatter plot", num_cols,) 
+    col2 = c2.radio("select the second column for scatter plot", num_cols) 
     fig = px.scatter(df, x=col1, y=col2, title=f'{col1} vs {col2}')
     st.plotly_chart(fig, use_container_width=True)
 
